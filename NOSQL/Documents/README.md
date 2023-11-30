@@ -11,10 +11,11 @@ Chercher un élément dans la collection :
 ```
 db.collection.findOne()
 ```
+Ici, aucun paramètre n'est renseigné dans la fonction findOne(). En conséquence, c'est le premier document qu'il trouve qui est retourné.
 
 Compter le nombre de documents dans la collection : 
 ```
-db.movies.count()
+db.collection.count()
 ```
 
 Chercher tous les documents dont le film est de type **Action** :
@@ -30,3 +31,8 @@ db.collection.count({
     "genres": "Action"
 })
 ```
+
+### Insertion de donnée
+
+
+### Modification d'un document
