@@ -32,7 +32,32 @@ db.collection.count({
 })
 ```
 
-### Insertion de donnée
+Trouver les films dont le titre contient **1995** :
+```
+db.collection.find({"title" : /.*1995.*/})
+```
 
+### Insertion de donnée
+Insertion d'un nouveau film dans la collection :
+```
+db.collection.insertOne(
+    { "_id" : 139, "title" : "Oppenheimer (2023)", "genres" : ["Drama", "Biopic"], "year": 2023 }
+)
+```
+
+Au passage, notez qu'il n'est pas nécessaire que le nouveau document ait exactement la même structure que les autres. Ici, il possède le champ "year" que les autres n'ont pas.
 
 ### Modification d'un document
+Modifier le titre d'un document :
+```
+db.collection.update(
+    { _id: 1},
+    {
+        $set: {
+            title: "Toy Story (1995), super film"
+        }
+    }
+)
+```
+
+**Attention** : cette instruction ne fonctionne pas sur cet environnement de démonstration.
