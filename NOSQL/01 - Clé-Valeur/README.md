@@ -25,8 +25,33 @@ Pour cet exercice, utilisation de la sandbox Redis (Bac à sable), disponible ic
 > 
 > Chercher la valeur de la nouvelle clef
 
-3. Tester les commandes suivantes
+3. Tester les commandes suivantes pour renommer la clé et analyser leur résultat :
+> ```
+> SET User:2 Toto
+> RENAME User:1 User:2
+> GET User:1
+> EXISTS User:1
+> GET User:2
+> SET User:3 Toto
+> RENAMENX User:3 User:2
+> GET User:3
+> GET User:2
+> RENAMENX User:3 User:1
+> GET User:1
+> EXISTS User:3
+> ```
 
+4. Créer, **avec une seule commande**, les 2 clés suivantes (cf. commande **MSET**)
+  * User:3 avec comme valeur Maud
+  * User:4 avec comme valeur Xavier
+> <details>
+>   <summary>Solution</summary>
+> 
+> ```
+> mset User:3 Maud User:4 Xavier
+> ```
+> 
+> </details>
 
 ## Exercice 1 : Ecriture / Lecture simple dans Redis
 Insertion d'une clef avec sa valeur associée dans la base de données Redis :
