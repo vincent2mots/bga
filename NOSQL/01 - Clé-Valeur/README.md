@@ -1,20 +1,31 @@
 # Test d'utilisation d'une base de données NOSQL de type Clé-Valeur
-Pour cet exercice, utilisation de la sandbox Redis (Bac à sable), disponible ici gratuitement : [cliquer ici](https://try.redis.io/){:target="_blank"}
- 
+Pour cet exercice, utilisation de la sandbox Redis (Bac à sable), disponible ici gratuitement : [cliquer ici](https://try.redis.io/)
+
 ## Exercice 1
 
 1. Créer la clé **User** avec comme valeur **Dario**
-<details>
-  <summary>Solution</summary>
+> <details>
+>   <summary>Solution</summary>
+> 
+> ```
+> set User Dario
+> ```
+> 
+> </details>
+> 
+> Pour voir le contenu de la clef User : 
+> ```
+> get User
+> ```
 
-```
-set User Dario
-```
+2. Tester la commande suivante pour renommer la clé :
+> ```
+> RENAME User User:1
+> ```
+> 
+> Chercher la valeur de la nouvelle clef
 
-</details>
-
-
-
+3. Tester les commandes suivantes
 
 
 ## Exercice 1 : Ecriture / Lecture simple dans Redis
