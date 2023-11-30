@@ -53,6 +53,46 @@ Pour cet exercice, utilisation de la sandbox Redis (Bac à sable), disponible ic
 > 
 > </details>
 
+5. Lister toutes les clés définies dans la base (cf. commande **KEYS**)
+> <details>
+>   <summary>Solution</summary>
+> 
+> ```
+> keys *
+> ```
+> 
+> </details>
+
+6. Lister toutes les clés commençant par User User:3
+> <details>
+>   <summary>Solution</summary>
+> 
+> ```
+> keys User:3*
+> ```
+> 
+> </details>
+
+7. Lister les valeurs des différentes clés (cf. command **MGET**)
+> <details>
+>   <summary>Solution</summary>
+> 
+> ```
+> mget User:1 User:2 User:3
+> ```
+> 
+> </details>
+
+8. Ajouter un 'e' à la fin de valeur de la clé (cf. command **SETRANGE**)
+> <details>
+>   <summary>Solution</summary>
+> 
+> ```
+> setrange 
+> ```
+> 
+> </details>
+
 ## Exercice 1 : Ecriture / Lecture simple dans Redis
 Insertion d'une clef avec sa valeur associée dans la base de données Redis :
 ```
