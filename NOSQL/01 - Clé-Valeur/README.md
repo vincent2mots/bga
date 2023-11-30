@@ -1,5 +1,21 @@
 # Test d'utilisation d'une base de données NOSQL de type Clé-Valeur
-Pour cet exercice, utilisation de la sandbox Redis (Bac à sable), disponible ici gratuitement : [cliquer ici](https://try.redis.io/)
+Pour cet exercice, utilisation de la sandbox Redis (Bac à sable), disponible ici gratuitement : [cliquer ici](https://try.redis.io/){:target="_blank"}
+
+## Exercice 1
+
+1. Créer la clé **User** avec comme valeur **Dario**
+<details>
+  <summary>Solution</summary>
+
+```
+set User Dario
+```
+
+</details>
+
+
+
+
 
 ## Exercice 1 : Ecriture / Lecture simple dans Redis
 Insertion d'une clef avec sa valeur associée dans la base de données Redis :
