@@ -70,7 +70,7 @@ Pour cet exercice, utilisation de la sandbox Redis (Bac à sable), disponible ic
 >   <summary>Solution</summary>
 > 
 > ```
-> mset User:3 Maud User:4 Xavier
+> MSET User:3 Maud User:4 Xavier
 > ```
 > 
 > </details>
@@ -80,7 +80,7 @@ Pour cet exercice, utilisation de la sandbox Redis (Bac à sable), disponible ic
 >   <summary>Solution</summary>
 > 
 > ```
-> keys *
+> KEYS *
 > ```
 > 
 > </details>
@@ -90,7 +90,7 @@ Pour cet exercice, utilisation de la sandbox Redis (Bac à sable), disponible ic
 >   <summary>Solution</summary>
 > 
 > ```
-> keys User:3*
+> KEYS User:3*
 > ```
 > 
 > </details>
@@ -100,7 +100,7 @@ Pour cet exercice, utilisation de la sandbox Redis (Bac à sable), disponible ic
 >   <summary>Solution</summary>
 > 
 > ```
-> mget User:1 User:2 User:3
+> MGET User:1 User:2 User:3
 > ```
 > 
 > </details>
@@ -110,15 +110,82 @@ Pour cet exercice, utilisation de la sandbox Redis (Bac à sable), disponible ic
 >   <summary>Solution</summary>
 > 
 > ```
-> setrange User:1 4 "e"
+> SETRANGE User:1 4 "e"
 > ```
 > 
 > </details>
 
 > Vérifier le résultat avec la commande :
 > ```
-> get User:1
+> GET User:1
 > ```
+
+9. Tester la commande : 
+> ```
+> SETNX User:3 "Aude"
+> ```
+Comment interpréter le résultat obtenu?
+
+10. Créer une clé temporaire User:5 avec comme valeur Toto de durée de vie 30
+secondes (cf. commande **SETEX**)
+> <details>
+>   <summary>Solution</summary>
+> 
+> ```
+> SETEX User:5 30 toto
+> ```
+> 
+> </details>
+
+11. Vérifier la durée de vie de la clé User:5 (cd. commande **TTL**)
+> <details>
+>   <summary>Solution</summary>
+> 
+> ```
+> TTL User:5
+> ```
+> 
+> </details>
+
+12. Vérifier la durée de vie de la clé User:1 (cd. commande **TTL**)
+> <details>
+>   <summary>Solution</summary>
+> 
+> ```
+> TTL User:1
+> ```
+> 
+> </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Exercice 1 : Ecriture / Lecture simple dans Redis
 Insertion d'une clef avec sa valeur associée dans la base de données Redis :
