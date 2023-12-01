@@ -3,5 +3,10 @@ Pour cet exercice, utilisation de l'offre gratuite de Datastax : [cliquer ici](h
 
 Utilisation de la version gratuite de Datastax, après inscription (besoin d'une adresse mail)
 
-## Exercice 1
+## Pré requis
 Créer une base de données :
+![](https://raw.githubusercontent.com/vincent2mots/bga/main/NOSQL/images/cassandra.PNG)
+
+## Exercice 1
+
+
