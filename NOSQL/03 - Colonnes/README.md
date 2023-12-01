@@ -5,6 +5,7 @@ Utilisation de la version gratuite de Datastax, après inscription (besoin d'une
 
 ## Pré requis
 Créer une base de données :
+
 ![](https://raw.githubusercontent.com/vincent2mots/bga/main/NOSQL/images/cassandra.PNG)
 
 ## Exercice 1
