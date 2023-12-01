@@ -28,16 +28,38 @@ Pour cet exercice, utilisation de la sandbox Redis (Bac à sable), disponible ic
 3. Tester les commandes suivantes pour renommer la clé et analyser leur résultat :
 > ```
 > SET User:2 Toto
+> ```
+> ```
 > RENAME User:1 User:2
+> ```
+> ```
 > GET User:1
+> ```
+> ```
 > EXISTS User:1
+> ```
+> ```
 > GET User:2
+> ```
+> ```
 > SET User:3 Toto
+> ```
+> ```
 > RENAMENX User:3 User:2
+> ```
+> ```
 > GET User:3
+> ```
+> ```
 > GET User:2
+> ```
+> ```
 > RENAMENX User:3 User:1
+> ```
+> ```
 > GET User:1
+> ```
+> ```
 > EXISTS User:3
 > ```
 
@@ -83,15 +105,20 @@ Pour cet exercice, utilisation de la sandbox Redis (Bac à sable), disponible ic
 > 
 > </details>
 
-8. Ajouter un 'e' à la fin de valeur de la clé (cf. command **SETRANGE**)
+8. Ajouter un 'e' à la fin de valeur de la clé User:1 (cf. command **SETRANGE**)
 > <details>
 >   <summary>Solution</summary>
 > 
 > ```
-> setrange 
+> setrange User:1 4 "e"
 > ```
 > 
 > </details>
+
+> Vérifier le résultat avec la commande :
+> ```
+> get User:1
+> ```
 
 ## Exercice 1 : Ecriture / Lecture simple dans Redis
 Insertion d'une clef avec sa valeur associée dans la base de données Redis :
